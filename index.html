@@ -39,8 +39,8 @@
     <section class="form-section">
       <form id="formulario">
         <h2>Registrar Activo</h2>
-        <label for="codigo">Cantidad</label>
-        <input type="text" id="codigo" required>
+        <label for="cantidad">Cantidad</label>
+        <input type="text" id="cantidad" required>
 
         <label for="nombre">Nombre del Activo</label>
         <input type="text" id="nombre" required>
@@ -148,7 +148,7 @@
     formulario.addEventListener("submit", e => {
       e.preventDefault();
       const nuevo = {
-        codigo: document.getElementById("cantidad").value,
+        cantidad: document.getElementById("cantidad").value,
         nombre: document.getElementById("nombre").value,
         marca: document.getElementById("marca").value,
         categoria: document.getElementById("categoria").value,
@@ -172,7 +172,7 @@
 
     function editarActivo(i) {
       const activo = activos[i];
-      document.getElementById("cantidad").value = activo.codigo;
+      document.getElementById("cantidad").value = activo.cantidad  ;
       document.getElementById("nombre").value = activo.nombre;
       document.getElementById("marca").value = activo.marca;
       document.getElementById("categoria").value = activo.categoria;
